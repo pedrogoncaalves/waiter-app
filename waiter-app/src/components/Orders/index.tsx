@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import * as S from './styles'
 
+import { Modal } from '../OrderModal/index'
+
 export const Orders = () => {
+
+  const [isModalVisible, setModalVisible] = useState(false);
+
+
     return(
         <S.Container>
         <S.Board>
@@ -11,9 +18,10 @@ export const Orders = () => {
             </header>
 
             <S.orderContainer>
-                <button type="button">
+                <button onClick={() => setModalVisible(true)}type="button">
                     <strong>Mesa 2</strong>
                     <span> 2 itens</span>
+                    {isModalVisible ? <Modal/> : null}
 
                 </button>
             </S.orderContainer>
