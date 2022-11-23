@@ -20,8 +20,8 @@ export const Orders = () => {
         </S.Board>
         <S.Board>
             <header>
-                <span>🕑</span>
-                <strong>Fila de Espera</strong>
+                <span>👩‍🍳</span>
+                <strong>Em produção</strong>
                 <span>(1)</span>
             </header>
 
@@ -35,8 +35,8 @@ export const Orders = () => {
         </S.Board>
         <S.Board>
             <header>
-                <span>🕑</span>
-                <strong>Fila de Espera</strong>
+                <span>✅</span>
+                <strong>Pronto</strong>
                 <span>(1)</span>
             </header>
 
