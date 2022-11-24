@@ -21,7 +21,9 @@ export const Orders = () => {
                 <button onClick={() => setModalVisible(true)}type="button">
                     <strong>Mesa 2</strong>
                     <span> 2 itens</span>
-                    {isModalVisible ? <Modal/> : null}
+                    {isModalVisible ? (
+                    <Modal onClose={() => setModalVisible(false)}/> 
+                    ) : null}
 
                 </button>
             </S.orderContainer>

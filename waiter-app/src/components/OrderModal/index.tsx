@@ -3,17 +3,14 @@ import React, { useState} from "react";
 import * as C from './styles'
 
 
-export const Modal = () => {
+export const Modal = ({ onClose= () => {}}) => {
 
-    const [isModalAvailabe, setModalAvailable] = useState(true);
-
-
-
+  
     return(
         <C.styledModal>
         <C.Container>
             <h1>Mesa 2</h1>
-            <button onClick={() => setModalAvailable(false)}>x</button>
+            <button onClick={onClose}>Fechar</button>
         </C.Container>
         </C.styledModal>
     )
