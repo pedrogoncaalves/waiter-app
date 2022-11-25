@@ -30,3 +30,8 @@ width: 30rem;
 height: 34.81rem;
 
 `
+
+export const Button = styled.button`
+color: black;
+border: 1px solid red;
+`
