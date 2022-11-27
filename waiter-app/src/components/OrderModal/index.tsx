@@ -3,7 +3,7 @@ import React, { useState} from "react";
 import * as C from './styles'
 
 
-export const Modal = ({ onClose = ()=> { }}) => {
+export const Modal = ({ onClose = () => { }}) => {
 
   
     return(
@@ -15,3 +15,4 @@ export const Modal = ({ onClose = ()=> { }}) => {
         </C.styledModal>
     )
 }
+

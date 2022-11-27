@@ -20,8 +20,6 @@ cursor: default;
 
 `
 
-
-
 export const Container = styled.div`
 
 background: #FFFFFF;

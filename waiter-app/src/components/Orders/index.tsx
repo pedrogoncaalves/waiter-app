@@ -11,9 +11,16 @@ export const Orders = () => {
 
     return(
         <S.Container>
-            <OrdersBoard/>
-            <OrdersBoard/>
-            <OrdersBoard/>
+            <OrdersBoard
+            icon="🕑"
+            title="Fila de Espera"
+            />
+            <OrdersBoard
+            icon="👩‍🍳"
+            title="Em produção"/>
+            <OrdersBoard
+            icon="✅"
+            title="Pronto!"/>
         
         </S.Container>
     )

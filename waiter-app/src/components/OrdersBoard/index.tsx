@@ -3,14 +3,18 @@ import React from 'react';
 
 import * as S from './styles';
 
+interface IOrdersProps  {
+    icon: string
+    title: string
+}
 
-export const OrdersBoard = () => {
+export const OrdersBoard = ({ icon, title }: IOrdersProps) => {
     return(
         <>
         <S.Board>
         <header>
-            <span>🕑</span>
-            <strong>Fila de Espera</strong>
+            <span>{icon}</span>
+            <strong>{title}</strong>
             <span>(1)</span>
         </header>
 
