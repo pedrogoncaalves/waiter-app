@@ -6,7 +6,7 @@ import { OrdersBoard } from '../OrdersBoard';
 
 export const Orders = () => {
 
-  const [isModalVisible, setModalVisible] = useState(false);
+  
 
 
     return(
@@ -14,13 +14,16 @@ export const Orders = () => {
             <OrdersBoard
             icon="🕑"
             title="Fila de Espera"
+            orders={[]}
             />
             <OrdersBoard
             icon="👩‍🍳"
-            title="Em produção"/>
+            title="Em produção"
+            orders={[]}/>
             <OrdersBoard
             icon="✅"
-            title="Pronto!"/>
+            title="Pronto!"
+            orders={[]}/>
         
         </S.Container>
     )
