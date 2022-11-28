@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import * as S from './styles'
 
-import { Modal } from '../OrderModal/index'
+import { OrderModal } from '../OrderModal/index'
 import { OrdersBoard } from '../OrdersBoard';
 
 export const Orders = () => {

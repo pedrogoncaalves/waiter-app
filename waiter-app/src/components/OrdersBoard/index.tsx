@@ -1,6 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { Order } from '../../types/Order'
+import { OrderModal } from '../../components/OrderModal/index'
 
 import * as S from './styles';
 
@@ -16,13 +17,13 @@ export const OrdersBoard = ({ icon, title, orders }: IOrdersProps) => {
 
 
     function handleOpenModal() {
+        setIsModalVisible(true);
 
     }
 
-
-
     return(
         <>
+        <OrderModal visible={isModalVisible}/>
         <S.Board>
         <header>
             <span>{icon}</span>

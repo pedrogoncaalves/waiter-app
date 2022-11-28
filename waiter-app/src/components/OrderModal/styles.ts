@@ -21,16 +21,42 @@ cursor: default;
 
 `
 
-export const Container = styled.div`
-
+export const ModalBody = styled.div`
 background: #FFFFFF;
 border-radius: 8px;
 width: 30rem;
-height: 34.81rem;
+padding: 32px;
 
+ header {
+
+    display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+    button {
+    border: 0;
+    background: transparent;
+    line-height: 0;
+ }
+ 
+
+ strong {
+    font-size: 24px;
+ }
+
+ .status-container {
+    margin-top: 32px;
+
+    small {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+ }
+
+
+ }
+
+
+ 
 `
 
-export const Button = styled.button`
-color: black;
-border: 1px solid red;
-`
