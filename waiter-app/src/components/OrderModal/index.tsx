@@ -8,10 +8,15 @@ import { formatCurrency } from '../../utils/formatCurrency'
 interface OrderModalProps {
     visible: boolean;
     order: Order | null;
+    onClose: () => void;
 }
 
 
-export const OrderModal = ({visible, order}: OrderModalProps) => {
+export const OrderModal = ({visible, order, onClose}: OrderModalProps) => {
+
+    const total = order?.products.reduce((acc, { product, quantity }) => {
+        return acc + (product.price * quantity)
+    }, 0);
 
     if (!visible || !order) {
         return null;
@@ -23,7 +28,7 @@ export const OrderModal = ({visible, order}: OrderModalProps) => {
             <header>
                 <strong> Mesa 2</strong>
 
-                <button type="button">
+                <button type="button" onClick={onClose}>
                     <img src={closeIcon} alt="ícone de fechar"/>
                 </button>
             </header>
@@ -67,9 +72,22 @@ export const OrderModal = ({visible, order}: OrderModalProps) => {
                 </div>
                 <div className="total">
                     <span>Total</span>
-                    <strong>{formatCurrency(</strong>
+                    <strong>{formatCurrency(total)}</strong>
                 </div>
             </C.OrderDetails>
+
+            <C.Actions>
+                <button type="button" className="primary">
+                    <span>👩‍🍳</span>
+                    <strong>Iniciar produção</strong>
+
+                </button>
+                <button type="button" className="secondary">
+                    
+                    <strong>Cancelar pedido</strong>
+
+                </button>
+            </C.Actions>
         </C.ModalBody>
         </C.Overlay>
     )

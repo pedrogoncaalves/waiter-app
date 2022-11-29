@@ -125,10 +125,35 @@ margin-top: 32px;
    font-size: 14px;
    opacity: 0.8;
 
-
    }
 
-   
-
  }
+`
+
+export const Actions = styled.footer`
+display: flex;
+flex-direction: column;
+
+margin-top: 32px;
+
+.primary {
+   background: #333;
+   border-radius: 48px;
+   border: 0;
+   color: #FFF;
+   padding: 12px 24px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   
+}
+
+.secondary {
+   padding: 12px 24px;
+   color: #D73035;
+   font-weight: bold;
+   border: 0;
+   background: transparent;
+   margin-top: 12px;
+}
 `

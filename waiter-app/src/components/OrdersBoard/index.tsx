@@ -18,6 +18,11 @@ export const OrdersBoard = ({ icon, title, orders }: IOrdersProps) => {
 
     function handleOpenModal(order: Order) {
         setIsModalVisible(true);
+        setSelectedOrder(order);
+
+    }
+    function handleCloseModal(order: Order) {
+        setIsModalVisible(false);
         setSelectedOrder(null);
 
     }
@@ -25,7 +30,8 @@ export const OrdersBoard = ({ icon, title, orders }: IOrdersProps) => {
     return(
         <>
         <OrderModal visible={isModalVisible}
-        order={selectedOrder}/>
+        order={selectedOrder}
+        onClose={handleCloseModal}/>
         <S.Board>
         <header>
             <span>{icon}</span>
