@@ -4,7 +4,7 @@
 export interface Order {
     _id: string;
     table: string;
-    status: string;
+    status: 'DONE' | 'WAITING' | 'IN_PRODUCTION'
     products: Array<{
         _id: string;
         quantity: number;

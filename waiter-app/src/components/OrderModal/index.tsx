@@ -1,17 +1,18 @@
 import React, { useState} from "react";
 
 import * as C from './styles'
-
+import { Order } from '../../types/Order'
 import closeIcon from '../../assets/images/close-icon.svg'
 
 interface OrderModalProps {
     visible: boolean;
+    order: Order | null;
 }
 
 
-export const OrderModal = ({visible}: OrderModalProps) => {
+export const OrderModal = ({visible, order}: OrderModalProps) => {
 
-    if (!visible) {
+    if (!visible || !order) {
         return null;
     }
 
@@ -30,10 +31,21 @@ export const OrderModal = ({visible}: OrderModalProps) => {
                 <small>Status do Pedido</small>
 
                 <div>
-                    <span>🕑</span>
-                    <strong>Fila de Espera</strong>
+                    <span>
+                        {order.status === 'WAITING' && '🕑'}
+                    {order.status === 'DONE' && '✅'}
+                    {order.status === 'IN_PRODUCTION' && '👩‍🍳'}
+                    </span>
+                    <strong>
+                    {order.status === 'WAITING' && 'Fila de Espera'}
+                    {order.status === 'DONE' && 'Pronto!'}
+                    {order.status === 'IN_PRODUCTION' && 'Em produção'}
+                    </strong>
                 </div>
             </div>
+            <C.OrderDetails>
+                <strong>Itens</strong>
+            </C.OrderDetails>
         </C.ModalBody>
         </C.Overlay>
     )

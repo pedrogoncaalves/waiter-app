@@ -18,7 +18,6 @@ justify-content: center;
 align-items: center;
 cursor: default;
 
-
 `
 
 export const ModalBody = styled.div`
@@ -51,12 +50,25 @@ padding: 32px;
         font-size: 14px;
         opacity: 0.8;
     }
+
+    div {
+      margin-top: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
  }
 
-
  }
 
-
- 
 `
 
+export const OrderDetails = styled.div`
+margin-top: 32px;
+
+ > strong {
+   font-weight: 500;
+   font-size: 14px;
+   opacity: 0.8;
+ }
+`
